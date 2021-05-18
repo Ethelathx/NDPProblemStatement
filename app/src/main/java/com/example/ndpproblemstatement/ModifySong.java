@@ -42,7 +42,9 @@ public class ModifySong extends AppCompatActivity {
         data = (Song) i.getSerializableExtra("data");
 
         tvId.setText("ID:" + data.get_id());
-
+        etSinger.setText(data.getSingers());
+        etTitle.setText(data.getTitle());
+        etYear.setText(String.valueOf(data.getYear()));
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
